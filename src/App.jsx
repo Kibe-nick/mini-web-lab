@@ -29,13 +29,14 @@ function App() {
 
   return (
     <div className="container">
-      <Header />
-      <main className="main-content">
-      <p>If you see this text, the component is rendering.</p>
-        
-      </main>
-      <Footer />
-     </div>
+    <Header />
+    <main className="main-content">
+      <SearchBar className="search-bar" />
+      <TransactionForm className="form" />
+      <TransactionTable className="table" />
+    </main>
+    <Footer />
+  </div>
   );
 }
 
