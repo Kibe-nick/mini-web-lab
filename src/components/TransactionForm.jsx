@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
 function TransactionForm({ onAddTransaction, className }) {
-  const [description, setDescription] = useState("");
-  const [amount, setAmount] = useState("");
-  const [category, setCategory] = useState("");
-
+  const [description, setDescription] = useState("");  // State to store the description of the transaction
+  const [amount, setAmount] = useState(""); // State to store the amount of the transaction
+  const [category, setCategory] = useState("");  // State to store the category of the transaction
+//handle submissions
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Add the new transaction and clear the form fields
     onAddTransaction({ description, amount: parseFloat(amount), date });
     setDescription("");
     setAmount("");
