@@ -54,5 +54,6 @@ Commit your changes: git commit -am 'Add new feature'.
 Push to the branch: git push origin feature/your-feature.
 Create a new Pull Request.
 
-
+## Live Demo
+You can view the live version of the application here: [Keeping Track - Live Demo](https://keepingtrack.netlify.app/)
 .
