@@ -31,9 +31,19 @@ function App() {
     <div className="container">
     <Header />
     <main className="main-content">
-      <SearchBar className="search-bar" />
-      <TransactionForm className="form" />
-      <TransactionTable className="table" />
+      <SearchBar 
+      className="search-bar" 
+      searchQuery={searchQuery} 
+      onSearch={handleSearch} 
+      />
+      <TransactionForm 
+      className="form" 
+      onAddTransaction={handleAddTransaction} 
+      />
+      <TransactionTable  
+      className="table" 
+      transactions={filteredTransactions}
+      />
     </main>
     <Footer />
   </div>

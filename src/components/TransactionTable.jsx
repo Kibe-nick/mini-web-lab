@@ -1,8 +1,8 @@
 import React from "react";
 
-function TransactionTable({ transactions }) {
+function TransactionTable({ transactions, className }) {
   return (
-    <table className="table">
+    <table className={className}>
       <thead>
         <tr>
           <th>Description</th>

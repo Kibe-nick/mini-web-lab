@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 
-function TransactionForm({ onAddTransaction }) {
+function TransactionForm({ onAddTransaction, className }) {
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
   const [category, setCategory] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAddTransaction({ description, amount: parseFloat(amount), category });
+    onAddTransaction({ description, amount: parseFloat(amount), date });
     setDescription("");
     setAmount("");
     setCategory("");
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form className={className} onSubmit={handleSubmit}>
       <div className="form-group">
       <label htmlFor="description">Description</label>
       <input
@@ -38,13 +38,13 @@ function TransactionForm({ onAddTransaction }) {
       />
        </div>
        <div className="form-group">
-        <label htmlFor="date">Date</label>
+        <label htmlFor="category">Category</label>
       <input
         type="text"
-        id="date"
-        value={date}
-        onChange={(e) => setDate(e.target.value)}
-        placeholder="Date"
+        id="category"
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+        placeholder="Category"
         required
       />
       <button type="submit">Add Transaction</button>

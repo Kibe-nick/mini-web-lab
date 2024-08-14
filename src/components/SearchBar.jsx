@@ -1,6 +1,6 @@
 import React from "react";
 
-function SearchBar({ className, searchQuery, onSearch }) {
+function SearchBar({ searchQuery, onSearch, className }) {
   const handleChange = (e) => {
     onSearch(e.target.value);
   };
@@ -10,7 +10,7 @@ function SearchBar({ className, searchQuery, onSearch }) {
       type="text"
       value={searchQuery}
       onChange={handleChange}
-      className={search-bar} 
+      className={className}
       placeholder="Search transactions..."
     />
   );
